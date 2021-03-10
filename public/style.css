@@ -1,0 +1,27 @@
+.container {
+    padding: 5% 25% 0% 25%;
+}
+.row{
+    padding: 0% 32% 2% 32%;
+}
+.col{
+    margin-right: 20px; 
+}
+.transaction{
+    padding: 2% 31% 2% 31%; 
+}
+.transaction .card{
+    margin-top: 30px; 
+}
+.form{
+    margin-bottom: 10px; 
+}
+input{
+    margin-top:10px;
+}
+button{
+    margin-top:10px;
+}
+span{
+    float: "right";
+}
