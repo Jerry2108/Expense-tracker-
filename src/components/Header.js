@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
-import { TransactionContext } from "./TransactionContext.js"; 
+import { TransactionContext } from "./TransactionContext.js";
 var headingStyle = {
-	padding: "2%", 
+	padding: "2%",
 	textAlign: "center"
 };
 var balanceStyle = {
@@ -11,15 +11,16 @@ var balanceStyle = {
 function Header() {
 	const input = useContext(TransactionContext);
 	const [balance, setBalance] = input.balance;
-	
+	console.log(input.balance[0]);
+	console.log(balance);
 	return (
 		<div class="container">
-			<h1 style={headingStyle}>Expense tracker</h1> 
+			<h1 style={headingStyle}>Expense tracker</h1>
 			<div class="balance" style={balanceStyle}>
 				<h4>My Budget</h4>
 				<h1 id="balance">${balance.income - balance.expense}</h1>
 			</div>
-		</div> 
+		</div>
 	)
 }
-export default Header; 
+export default Header;

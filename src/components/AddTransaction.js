@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react"; 
-import { TransactionContext } from "./TransactionContext"; 
+import React, { useState, useContext } from "react";
+import { TransactionContext } from "./TransactionContext";
 
 const style = {
     width: "20rem"
@@ -9,8 +9,8 @@ const style = {
 function AddTransaction() {
     const [category, updateCategory] = useState("");
     const [amount, updateAmount] = useState("");
-    const input = useContext(TransactionContext); 
-    const [balance, setBalance] = input.balance; 
+    const input = useContext(TransactionContext);
+    const [balance, setBalance] = input.balance;
     const [transactions, setTransactions] = input.transactions;
     function update() {
         const sign = amount.charAt(0);
@@ -30,7 +30,7 @@ function AddTransaction() {
                     expense: prevValue.expense
                 };
             }
-            else if (sign === '-') { 
+            else if (sign === '-') {
                 console.log(typeof (prevValue.expense));
                 return {
                     income: prevValue.income,
@@ -38,27 +38,27 @@ function AddTransaction() {
                 };
             }
         });
-       
+
     }
     return (
-        
+
         <div class="add transaction">
-           
+
             <h3><b>Add new transaction</b></h3>
             <hr></hr>
             <form>
                 <div className = "form">
                 <label for="text">Text:</label><br/>
                     <input type="text" id="item" name="item" placeholder="Enter category..." style={style}
-                        value={category} onChange= {(e) => updateCategory(e.target.value)} /> 
+                        value={category} onChange= {(e) => updateCategory(e.target.value)} />
                 </div>
                 <div className = "form">
-                    <label for="amount">Amount <br />(negative-expense, positive-income)</label><br/>
+                    <label for="amount">Amount <br />(-expense, +income)</label><br/>
                     <input type="text" name="amount" id="amount" placeholder="Enter amount..." style={style}
                         value={amount} onChange={(e) => updateAmount(e.target.value)} />
                 </div>
                 <button type="button" class="btn btn-dark" onClick={update}>Add transaction</button>
-            </form> 
+            </form>
         </div>
     );
 }

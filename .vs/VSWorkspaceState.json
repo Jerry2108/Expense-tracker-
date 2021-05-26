@@ -4,8 +4,10 @@
     "\\favicon_io",
     "\\public",
     "\\src",
-    "\\src\\components"
+    "\\src\\components",
+    "\\src\\config",
+    "\\src\\routes"
   ],
-  "SelectedNode": "\\server.js",
+  "SelectedNode": "\\src\\routes\\transactions.js",
   "PreviewInSolutionExplorer": false
 }
